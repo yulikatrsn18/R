@@ -110,4 +110,4 @@ data_new
 ![Rplot03](https://user-images.githubusercontent.com/60332569/78465751-11419b00-772c-11ea-9344-eebed3a80646.png)
 
 
-[^]YulikaTrisna,4/4/2020
+[^]Yulika Trisna 4/4/2020
