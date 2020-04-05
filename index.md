@@ -94,6 +94,8 @@ library(dplyr)
 data_new<-top_n(d,10)
 data_new
 ```
+Tabel :
+
 |word     |freq     |
 |---------|---------|
 |corona	|87       |			
