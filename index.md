@@ -10,6 +10,7 @@ Dengan diberlakukannya social distancing, aktivitas di luar rumah semakin berkur
 Twitter lagi booming nih mengenai #dirumahaja, sehingga saya tertarik untuk melakukan eksplorasi data mengenai hashtag ini.
 
 Pertama - tama, dilakukan pengambilan data dari twitter berupa 1000 tweet dengan hashtag #dirumahaja. Sebelumnya dilakukan setup authorization pada twitter sehingga mendapatkan api_key, api_secret_ access_token, dan access_sekret dari twitter developer.
+https://developer.twitter.com/en
 
 ## Data Crawling Twitter
 ```{r}
