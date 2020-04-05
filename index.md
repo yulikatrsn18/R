@@ -87,6 +87,7 @@ wordcloud(words = d$word, freq = d$freq, min.freq = 1,
 ```
 ![Rplot02](https://user-images.githubusercontent.com/60332569/78465665-18b47480-772b-11ea-906e-35c1c2d7ff18.png)
 
+
 Berikut Top 10 kata yang banyak digunakan dalam #dirumahaja :
 
 ```{r}
@@ -109,7 +110,10 @@ Tabel :
 |pagi	|41	|		
 |motion	|38	|
 
+
+## Histogram
+
 ![Rplot03](https://user-images.githubusercontent.com/60332569/78465751-11419b00-772c-11ea-9344-eebed3a80646.png)
 
 
-[^]Yulika Trisna 4/4/2020
+*Yulika Trisna 4/4/2020*
