@@ -9,13 +9,26 @@ Dengan diberlakukannya social distancing, aktivitas di luar rumah semakin berkur
 
 Twitter lagi booming nih mengenai #dirumahaja, sehingga saya tertarik untuk melakukan eksplorasi data mengenai hashtag ini.
 
-*Note : sebelumnya sudah dilakukan proses crawling data pada twitter, dengan mengambil 1000 tweet yang berhashtag #dirumahaja*
+Pertama - tama, dilakukan pengambilan data dari twitter berupa 1000 tweet dengan hashtag #dirumahaja. Sebelumnya dilakukan setup authorization pada twitter sehingga mendapatkan api_key, api_secret_ access_token, dan access_sekret dari twitter developer.
 
-## Input Data
+## Data Crawling Twitter
 ```{r}
-setwd("D:\\DS\\R\\twitter")
-data.frame<-read.csv("data.frame.csv", header=T)
+#setup authorization
+api_key<-"*******************************************"
+api_secret<-"*******************************************"
+access_token <- "*******************************************"
+access_secret<- "*******************************************"
+setup_twitter_oauth(api_key, api_secret, access_token, access_secret)
+
+#mengambil data dari twitter
+data<-searchTwitter("#dirumahaja", n=1000, lang="id")
+data.frame<-do.call("rbind", lapply(data, as.data.frame))
+View(data.frame)
+
+#mengexport data frame
+write.csv(data.frame, file="D:\\DS\\R\\twitter\\data.frame.csv", row.names=F)
 ```
+
 ## Data Cleaning
 ```{r}
 library(tm)
