@@ -77,7 +77,7 @@ View(d)
 ```
 
 ## Word Cloud
-```{r pressure, echo=FALSE}
+```{r}
 library(RColorBrewer)
 library(wordcloud)
 set.seed(1234)
@@ -94,3 +94,20 @@ library(dplyr)
 data_new<-top_n(d,10)
 data_new
 ```
+|word     |freq     |
+|---------|---------|
+|corona	|87       |			
+|covid	|85	|		
+|anak	|58	|		
+|udah	|55	|		
+|rumah	|51	|		
+|minggu	|50	|		
+|virus	|50	|		
+|lakukan	|43	|		
+|pagi	|41	|		
+|motion	|38	|
+
+![Rplot03](https://user-images.githubusercontent.com/60332569/78465751-11419b00-772c-11ea-9344-eebed3a80646.png)
+
+
+[^]YulikaTrisna,4/4/2020
