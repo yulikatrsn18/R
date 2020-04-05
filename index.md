@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+# Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/yulikatrsn18/R/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Pendahuluan
 
-### Markdown
+Awal tahun 2020 sampai saat ini, dunia sedang digencarkan oleh suatu wabah virus yakni virus COVID-19. Namun, merebaknya wabah virus ini di Indonesia baru dimulai pada awal februari, hingga 2 minggu terakhir (sejak artikel ini ditulis) pemerintah menetapkan kebijakan untuk melakukan social distancing.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Dengan diberlakukannya social distancing, aktivitas di luar rumah semakin berkurang, banyak kantor yang diliburkan, begitupula dengan sekolah. Sehingga banyak orang - orang yang memilih "rebahan di rumah aja". Aktivitas yang biasanya dilakukan adalah bermain sosial media, salah satunya twitter.
 
-```markdown
-Syntax highlighted code block
+Twitter lagi booming nih mengenai #dirumahaja, sehingga saya tertarik untuk melakukan eksplorasi data mengenai hashtag ini.
 
-# Header 1
-## Header 2
-### Header 3
+*Note : sebelumnya sudah dilakukan proses crawling data pada twitter, dengan mengambil 1000 tweet yang berhashtag #dirumahaja*
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Input Data
+```{r}
+setwd("D:\\DS\\R\\twitter")
+data.frame<-read.csv("data.frame.csv", header=T)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yulikatrsn18/R/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```{r pressure, echo=FALSE}
+library(RColorBrewer)
+library(wordcloud)
+set.seed(1234)
+wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+          max.words=50, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
+```
