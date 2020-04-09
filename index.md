@@ -1,7 +1,4 @@
-# Twitter Sentiment Analysis with R : Word Cloud
-
-
-## Pendahuluan
+# Pendahuluan
 
 Awal tahun 2020 sampai saat ini, dunia sedang digencarkan oleh suatu wabah virus yakni virus COVID-19. Namun, merebaknya wabah virus ini di Indonesia baru dimulai pada awal februari, hingga 2 minggu terakhir (sejak artikel ini ditulis) pemerintah menetapkan kebijakan untuk melakukan social distancing.
 
@@ -12,7 +9,7 @@ Twitter lagi booming nih mengenai #dirumahaja, sehingga saya tertarik untuk mela
 Pertama - tama, dilakukan pengambilan data dari twitter berupa 1000 tweet dengan hashtag #dirumahaja. Sebelumnya dilakukan setup authorization pada twitter sehingga mendapatkan api_key, api_secret_ access_token, dan access_sekret dari twitter developer.
 https://developer.twitter.com/en
 
-## Data Crawling Twitter
+# Data Crawling Twitter
 ```{r}
 #setup authorization
 api_key<-"*******************************************"
@@ -30,7 +27,7 @@ View(data.frame)
 write.csv(data.frame, file="D:\\DS\\R\\twitter\\data.frame.csv", row.names=F)
 ```
 
-## Data Cleaning
+# Data Cleaning
 ```{r}
 library(tm)
 
@@ -90,7 +87,7 @@ d <- data.frame(word = names(v),freq=v)
 View(d)
 ```
 
-## Word Cloud
+# Word Cloud
 ```{r}
 library(RColorBrewer)
 library(wordcloud)
@@ -125,7 +122,7 @@ Tabel :
 |motion	|38	|
 
 
-## Histogram
+# Histogram
 
 ![Rplot03](https://user-images.githubusercontent.com/60332569/78465751-11419b00-772c-11ea-9344-eebed3a80646.png)
 
